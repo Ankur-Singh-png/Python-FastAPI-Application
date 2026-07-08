@@ -2,6 +2,8 @@ from fastapi import FastAPI
 from app.routes import users, documents, folders
 from fastapi.middleware.cors import CORSMiddleware
 
+Base.metadata.create_all(bind=engine)
+
 app = FastAPI(
     title="Knowledge Vault API",
     version="1.0.0"
